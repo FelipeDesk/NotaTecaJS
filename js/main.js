@@ -23,7 +23,7 @@ function removerEspacos(string) {
     return string.replaceAll(/\s+/g, '')
 }
 
-const regexConteudo = /^[A-Za-zÀ-ÿ0-9\s.,!?]{5,}$/
+const regexConteudo = /^[A-Za-zÀ-ÿ0-9\s.,!?()]{2,}$/
 const regexAutoria = /^[A-Za-zÀ-ÿ0-9]{3,25}$/
 
 function validarConteudo(conteudo) {
