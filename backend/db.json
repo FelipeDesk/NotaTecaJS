@@ -1,44 +1,36 @@
 {
   "pensamentos": [
     {
-      "id": "2a56",
-      "favorito": false,
-      "conteudo": "Vc faz TI? Conserta meu microondas!",
-      "autoria": "Grupo da família",
-      "data": "2025-08-23T00:00:00.000Z"
+      "conteudo": "teste",
+      "autoria": "teste",
+      "data": "2026-03-30T00:00:00.000Z",
+      "id": "6Z1aLM0rlyI",
+      "favorito": true
     },
     {
-      "id": "4c7d",
-      "conteudo": "Da vida reclama, mas sem ela não vive!",
-      "autoria": "Mestre Yoda",
-      "data": "2025-11-03"
+      "conteudo": "musica",
+      "autoria": "musica",
+      "data": "2026-04-15T00:00:00.000Z",
+      "id": "eDXhuyHpdUw",
+      "favorito": true
     },
     {
-      "id": "5b8a",
-      "favorito": false,
-      "conteudo": "Na minha máquina funciona!",
-      "autoria": "Dev",
-      "data": "2024-02-21T00:00:00.000Z"
-    },
-    {
-      "id": "68uy",
-      "favorito": true,
-      "conteudo": "Esse é de laranja que parece de limão, mas tem gosto de tamarindo!",
-      "autoria": "Chaves",
-      "data": "2025-08-03T00:00:00.000Z"
-    },
-    {
-      "id": "9f3c",
-      "favorito": false,
-      "conteudo": "Você não é todo mundo!",
+      "conteudo": "teste3",
       "autoria": "Meu amor",
-      "data": "2024-05-09T00:00:00.000Z"
+      "data": "2026-04-07T00:00:00.000Z",
+      "id": "nanmjxrQe7g"
     },
     {
-      "conteudo": "exemplo",
+      "id": "SApf2lxqni8",
+      "conteudo": "oieeeeeeeeeee",
+      "autoria": "2323",
+      "data": "1212-12-02"
+    },
+    {
+      "conteudo": "teste5",
       "autoria": "teste",
       "data": "2026-04-15T00:00:00.000Z",
-      "id": "rmX9-R-3OiU"
+      "id": "m7ZMa4Vz4lc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

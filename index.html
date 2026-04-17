@@ -3,32 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD de Pensamentos</title>
+    <title>NotaTeca</title>
+    <link rel="icon" href="assets/imagens/nota.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
     <header>
         <div class="conteudo-cabecalho">
             <div class="logo">
-                <img src="assets/imagens/logo.png" alt="">
-                <h1>Trechos de músicas,<br> citações de livros e
-                    <br> <strong>suas melhores ideias
-                    <br> num só lugar!</strong>
-                </h1>
+                <h1>Que tal anotar músicas <br> todos os dias?</h1>
             </div>
             <div class="imagem-cabecalho">
-                <img src="assets/imagens/computador-cabecalho.png" alt="">
+                <img src="assets/imagens/logo.png" alt="">
             </div>
         </div>
     </header>
     <main class="background-overlay">
         <div class="overlay"></div>
         <div class="overlay overlay-color"></div>
-        <h2>Adicione um pensamento novo:</h2>
+        <h2>Adicione uma música nova:</h2>
         <section id="form-container">
             <form id="pensamento-form">
                 <input type="hidden" id="pensamento-id" />
-                <label for="pensamento-conteudo">Pensamento</label>
+                <label for="pensamento-conteudo">Música</label>
                 <textarea id="pensamento-conteudo" placeholder="Digite seu pensamento" required></textarea>
                 <label for="pensamento-autoria">Autoria ou Fonte</label>
                 <input type="text" id="pensamento-autoria" placeholder="Insira a autoria ou fonte" required />
@@ -42,20 +39,21 @@
         </section>
         <span></span>
         <section id="lista-pensamentos-container">
-            <h3>Meu Mural</h3>
+            <h3>Meu Mural de Músicas</h3>
             <section id="busca-container">
                 <input type="text" id="campo-busca" placeholder="O que você procura?">
                 <img class="lupa" src="assets/imagens/lupa.png" alt="">
+                <img class="fav" src="assets/imagens/icone-favorito_outline-azul.png" alt="">
             </section>
             <div id="mensagem-vazia" class="mensagem-vazia">
                 <img src="assets/imagens/lista-vazia.png" alt="Nenhum pensamento disponível">
-                <p>Nada por aqui ainda, que tal compartilhar alguma ideia?</p>
+                <p>Nada por aqui ainda, que tal compartilhar alguma música?</p>
             </div>
             <ul id="lista-pensamentos"></ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Desenvolvido por Alura. Projeto fictício sem fins comerciais.</p>
+        <p>&copy; 2026 Developed by Felipe Santiago</p>
     </footer>
     <script type="module" src="js/api.js"></script>
     <script type="module" src="js/main.js"></script>

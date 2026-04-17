@@ -26,7 +26,7 @@ main {
   flex-direction: column;
   align-items: center;
   position: relative;
-  min-height: 280vh;
+  min-height: 200vh;
   box-sizing: border-box; 
 }
 
@@ -47,7 +47,7 @@ main {
 }
 
 header {
-  padding: 112px 240px 112px 360px;
+  padding: 0px 300px;
   background: var(--Azul-Dark, #041832);
 }
 
@@ -56,16 +56,6 @@ header {
   justify-content: center;
   gap: 32px;
   align-items: center;
-}
-
-header .logo {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-}
-
-header .logo img {
-  max-width: 200px;
 }
 
 header .logo h1 {
@@ -150,6 +140,12 @@ h2, h3 {
   margin-left: -40px;
   width: 24px;
   height: 24px;
+}
+
+.fav {
+  margin-left: 30px;
+  width: 35px;
+  cursor: pointer;
 }
 
 #pensamento-conteudo, #pensamento-autoria, #pensamento-data {

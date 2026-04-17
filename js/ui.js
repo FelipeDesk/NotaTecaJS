@@ -25,7 +25,7 @@ const ui = {
                 pensamentosParaRenderizar = await api.buscarPensamentos()
             }
 
-            if (pensamentosParaRenderizar.lenght === 0) {
+            if (pensamentosParaRenderizar.length === 0) {
                 mensagemVazia.style.display = 'block'
             } else {
                 mensagemVazia.style.display = 'none'
@@ -44,7 +44,7 @@ const ui = {
         li.classList.add('li-pensamento')
 
         const iconeAspas = document.createElement('img')
-        iconeAspas.src = 'assets/imagens/aspas-azuis.png'
+        iconeAspas.src = 'assets/imagens/nota.png'
         iconeAspas.alt = 'Aspas azuis'
         iconeAspas.classList.add('icone-aspas')
 

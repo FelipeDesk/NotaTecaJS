@@ -2,6 +2,8 @@ import ui from './ui.js'
 import api from './api.js'
 
 const pensamentosSet = new Set()
+let mostrandoFavoritos = false
+let btnFavoritos
 
 async function adicionarChaveAoPensamento() {
     try {
@@ -22,7 +24,7 @@ function removerEspacos(string) {
 }
 
 const regexConteudo = /^[A-Za-zÀ-ÿ0-9\s.,!?]{5,}$/
-const regexAutoria = /^[A-Za-zÀ-ÿ]{3,25}$/
+const regexAutoria = /^[A-Za-zÀ-ÿ0-9]{3,25}$/
 
 function validarConteudo(conteudo) {
     return regexConteudo.test(conteudo)
@@ -39,10 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const formularioPensamento = document.getElementById('pensamento-form')
     const botaoCancelar = document.getElementById('botao-cancelar')
     const inputBusca = document.getElementById('campo-busca')
+    btnFavoritos = document.querySelector('.fav')
 
     formularioPensamento.addEventListener('submit', manipularSubmissaoFormulario)
     botaoCancelar.addEventListener('click', manipularCancelamento)
     inputBusca.addEventListener('input', manipularBusca)
+    btnFavoritos.addEventListener('click', manipularFavoritos)
 })
 
 async function manipularSubmissaoFormulario(event) {
@@ -67,6 +71,7 @@ async function manipularSubmissaoFormulario(event) {
 
     if (!validarData(data)) {
         alert('Não é permitido o cadastro de datas futuras, selecione outra data')
+        return
     }
 
     const chaveNovoPensamento = `${conteudo.trim().toLowerCase()}-${autoria.trim().toLowerCase()}`
@@ -110,4 +115,23 @@ function validarData(data){
     const dataAtual = new Date()
     const dataInserida = new Date(data)
     return dataInserida <= dataAtual
+}
+
+async function manipularFavoritos() {
+    try {
+        mostrandoFavoritos = !mostrandoFavoritos
+
+        const pensamentos = await api.buscarPensamentos()
+        if (mostrandoFavoritos) {
+            const favoritos = pensamentos.filter(pensamento => pensamento.favorito)
+            ui.renderizarPensamentos(favoritos)
+            btnFavoritos.src = 'assets/imagens/icone-favorito_azul.png'
+        } else {
+            ui.renderizarPensamentos(pensamentos)
+            btnFavoritos.src = 'assets/imagens/icone-favorito_outline-azul.png'
+        }
+    } catch (error) {
+        alert('Erro ao carregar favoritos')
+        throw error
+    }
 }
